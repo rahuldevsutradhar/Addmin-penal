@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --spacing-container: 1520px;
+  --font-open: "Open Sans", sans-serif;  
+}
