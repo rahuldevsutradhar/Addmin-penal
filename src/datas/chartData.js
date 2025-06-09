@@ -1,0 +1,36 @@
+
+export const salesData = [
+  { date: "11 May", value: 0.1 },
+  { date: "14 May", value: 0.3 },
+  { date: "16 May", value: 0.2 },
+  { date: "18 May", value: 0.5 },
+  { date: "20 May", value: 0.4 },
+  { date: "22 May", value: 0.6 },
+  { date: "24 May", value: 0.7 },
+  { date: "26 May", value: 0.5 },
+  { date: "28 May", value: 0.6 },
+  { date: "30 May", value: 0.8 },
+  { date: "01 Jun", value: 0.9 },
+  { date: "03 Jun", value: 0.7 },
+  { date: "05 Jun", value: 0.5 },
+  { date: "07 Jun", value: 0.6 },
+  { date: "09 Jun", value: 0.8 },
+];
+
+export const earningsData = [
+  { date: "11 May", value: 0.05 },
+  { date: "14 May", value: 0.1 },
+  { date: "16 May", value: 0.15 },
+  { date: "18 May", value: 0.2 },
+  { date: "20 May", value: 0.25 },
+  { date: "22 May", value: 0.3 },
+  { date: "24 May", value: 0.35 },
+  { date: "26 May", value: 0.4 },
+  { date: "28 May", value: 0.45 },
+  { date: "30 May", value: 0.5 },
+  { date: "01 Jun", value: 0.55 },
+  { date: "03 Jun", value: 0.6 },
+  { date: "05 Jun", value: 0.65 },
+  { date: "07 Jun", value: 0.7 },
+  { date: "09 Jun", value: 0.75 },
+];
