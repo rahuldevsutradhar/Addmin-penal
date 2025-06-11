@@ -9,8 +9,17 @@ import CartTwo from '../components/CartTwo'
 import CartThree from '../components/CartThree'
 import CartFour from '../components/CartFour'
 import ChartCard from '../components/ChartCard'
+import IconCard from '../components/IconCard'
+import Image from '../components/Image'
 import { salesData, earningsData } from "../datas/chartData";
 import { GrOrderedList } from 'react-icons/gr'
+import { FaBook, FaExchangeAlt, FaFirstOrder, FaHome, FaList, FaProductHunt, FaQuestionCircle, FaTelegramPlane, FaUser, FaWifi } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import profil from '../assets/profil.jpg'
+import { CgWebsite } from 'react-icons/cg'
+import { FaPeopleGroup } from 'react-icons/fa6'
+import { BiSolidMessageRounded } from 'react-icons/bi'
+import { MdBackup, MdOutlineCleaningServices, MdOutlineManageSearch } from 'react-icons/md'
 
 
 
@@ -20,7 +29,53 @@ const Home = () => {
       <Container>
         <Navbar />
         <Flex>
-          <div className='w-2/12'></div>
+          <div className='w-2/12'>
+          <Link to={'/profil'}>
+          <div className='flex tiems-center gap-x-2 mx-2 my-6 '>
+             <Image src={profil} className='w-10 h-10 rounded-full'/>
+             <div className='font-open text-[#777] text-[11px] pb-2 '>
+              <p>Admin</p>
+              <p>Administator</p>
+             </div>
+          </div>
+          </Link>
+
+
+         <Flex className='gap-y-2 flex-col'>
+           <IconCard title='Dashbord' icon={<FaHome />}  to='/'/>
+           <IconCard title="Manage Categories" icon={<FaList />} 
+           subItems={["Categories", "Sub categories", "Child categories"]}/>
+           <IconCard title="Manage Reels" icon={<FaList />} 
+           subItems={["Reels", "Reels List"]}/>
+           <IconCard title="Manage Product" icon={<FaProductHunt />} 
+           subItems={['Brands',' Add Product' ,'All Products', 'Stock Out Products',
+                     'Campaign Offer', 'CSV Import & Export', 'Product Reviews',
+                     'Manage Orders']}/>
+           <IconCard title="Manage order" icon={<FaFirstOrder />} 
+           subItems={['All Orders',' Pending Orders' ,'Progress Orders', 'Delivered Orders', 'Canceled Orders', 'Transactions']}/>
+           <IconCard title='Transactions' icon={<FaExchangeAlt />}  to='/'/>
+           <IconCard title="Ecommerce" icon={<CgWebsite />} 
+           subItems={['Set Coupons','Shipping' ,'State Tax', 'Tax', 'Currency', 'Payment','Customer List']}/>
+           <IconCard title='Customers List' icon={<FaPeopleGroup />}  to='/'/>
+           <IconCard title='Manage Tickets' icon={<BiSolidMessageRounded />}  to='/'/>
+           <IconCard title="Manage Site" icon={<MdOutlineManageSearch />} 
+           subItems={['General Settings','Courier API' ,'Home Page', 'Sliders', 'Services', 'Visibility','Social Login','Email Settings','SMS Settings','Announcement','Cookies Alert','Maintainance','Sitemap','Language','Manage Faqs']}/>
+           <IconCard title="Manage Faqs" icon={<FaQuestionCircle />} 
+           subItems={['Categories','Faqs' ]}/>
+           <IconCard title="Manage Blogs" icon={<FaWifi />} 
+           subItems={['Categories','Blogs' ]}/>
+           <IconCard title='Manage Pages' icon={<FaBook />}  to='/'/>
+           <IconCard title='Subscribers List' icon={<FaTelegramPlane />}  to='/'/>
+           <IconCard title="System User" icon={<FaUser />} 
+           subItems={['System User','Role' ]}/>
+           <IconCard title="System Backup" icon={<MdBackup />} 
+           subItems={['System Backup','Database Backup' ]}/>
+           <IconCard title="Cache Clear" icon={<MdOutlineCleaningServices />} 
+           subItems={['Version 5.0.0' ]}/>
+
+         </Flex>
+          
+          </div>
 
           <div className='w-10/12 flex flex-col justify-center mx-8'>
             <div className=' w-auto bg-white shadow-sm my-5  '>
@@ -51,19 +106,20 @@ const Home = () => {
                 <ChartCard
                   title="Monthly Product Sales Report"
                   data={salesData}
-                  color="#007bff" // Blue
+                  color="#007bff" 
                 />
                 <ChartCard
                   title="Monthly Earnings Report"
                   data={earningsData}
-                  color="#ff4d6d" // Red
+                  color="#ff4d6d"
                 />
               </div>
             </div>
             
             <div className='mb-[50px]'>
               <Title text='Recent Orders' className='text-[#575963] text-[17px] font-open px-3 py-4 shadow-md mb-4'/>
-            <OrderList/>
+
+              <OrderList/>
             </div>
 
           </div>

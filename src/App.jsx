@@ -5,6 +5,7 @@ import {
   Route, RouterProvider,
 } from "react-router-dom";
 import Home from './pages/Home';
+import Profil from './pages/Profil';
 
 
 
@@ -13,6 +14,7 @@ const router = createBrowserRouter(
     <>
     {/* <Route path="/" element={<RootLayout/>}> */}
            <Route path="" element={<Home />} />  
+           <Route path="/profil" element={<Profil />} />  
             
     {/* </Route> */}
     </>
