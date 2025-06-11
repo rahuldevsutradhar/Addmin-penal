@@ -31,7 +31,7 @@ const Home = () => {
         <Flex>
           <div className='w-2/12'>
           <Link to={'/profil'}>
-          <div className='flex tiems-center gap-x-2 mx-2 my-6 '>
+          <div className='hidden md:flex flex tiems-center gap-x-2 mx-2 my-6 '>
              <Image src={profil} className='w-10 h-10 rounded-full'/>
              <div className='font-open text-[#777] text-[11px] pb-2 '>
               <p>Admin</p>
@@ -41,7 +41,7 @@ const Home = () => {
           </Link>
 
 
-         <Flex className='gap-y-2 flex-col'>
+         <Flex className='hidden md:block gap-y-2 flex-col'>
            <IconCard title='Dashbord' icon={<FaHome />}  to='/'/>
            <IconCard title="Manage Categories" icon={<FaList />} 
            subItems={["Categories", "Sub categories", "Child categories"]}/>
@@ -70,10 +70,11 @@ const Home = () => {
            subItems={['System User','Role' ]}/>
            <IconCard title="System Backup" icon={<MdBackup />} 
            subItems={['System Backup','Database Backup' ]}/>
-           <IconCard title="Cache Clear" icon={<MdOutlineCleaningServices />} 
-           subItems={['Version 5.0.0' ]}/>
-
+           <IconCard title="Cache Clear" icon={<MdOutlineCleaningServices />} />
+           
+            <p className='font-open text-blue-500 text-[14px] font-bold mt-5 text-center'>'Version 5.0.0'</p>
          </Flex>
+        
           
           </div>
 

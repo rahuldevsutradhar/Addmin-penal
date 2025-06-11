@@ -14,15 +14,15 @@ export default function RecentOrders() {
   ];
 
   return (
-    <div className="p-6 bg-white shadow-md rounded-2xl">
+    <div className="p-3 md:p-6 bg-white shadow-md rounded-2xl">
       <div className="overflow-x-auto">
         <table className="min-w-full border-collapse">
           <thead>
             <tr className="bg-white text-left">
-              <th className="px-6 py-3 font-medium">Customer</th>
-              <th className="px-6 py-3 font-medium">Order ID</th>
-              <th className="px-6 py-3 font-medium">Payment Method</th>
-              <th className="px-6 py-3 font-medium">Total</th>
+              <th className="px-6  md:py-3 font-medium">Customer</th>
+              <th className="px-6  md:py-3 font-medium">Order ID</th>
+              <th className="px-6  md:py-3 font-medium">Payment Method</th>
+              <th className="px-6  md:py-3 font-medium">Total</th>
             </tr>
           </thead>
           <tbody>
@@ -35,8 +35,8 @@ export default function RecentOrders() {
                 <td className="px-6 py-4 text-blue-600 font-open hover:underline cursor-pointer">
                   {order.id}
                 </td>
-                <td className="px-6 py-4">{order.method}</td>
-                <td className="px-6 py-4">৳{order.total}</td>
+                <td className="px-6 py-2 md:py-4">{order.method}</td>
+                <td className="px-6 py-2 md:py-4">৳{order.total}</td>
               </tr>
             ))}
           </tbody>

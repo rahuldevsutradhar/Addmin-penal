@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-const Image = ({src,alt,className}) => {
+const Image = ({ src, alt = 'image', className = '' }) => {
+  if (!src) {
+    console.warn("Image component requires a 'src' prop.");
+    return null;
+  }
+
   return (
-     <img className={className} src={src} alt={alt} />
-)
-}
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      loading="lazy"
+      decoding="async"
+    />
+  );
+};
 
-export default Image
+export default Image;
