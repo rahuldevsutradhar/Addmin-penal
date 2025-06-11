@@ -20,6 +20,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
@@ -30,6 +31,7 @@ const Navbar = () => {
             document.body.style.overflow = 'auto';
         };
     }, [isOpen]);
+
     const handleIncrement = () => {
         setIsOpen(!isOpen)
     }
@@ -44,7 +46,7 @@ const Navbar = () => {
 
                         <Image src={logo} className='h-[34px] md:h-[39px] w-[175px] md:w-[120px]' />
                         <div className='block md:hidden'>
-                            <BsThreeDotsVertical className='w-4 h-5' />
+                            <BsThreeDotsVertical  className='w-4 h-5' />
                         </div>
                     </div>
 

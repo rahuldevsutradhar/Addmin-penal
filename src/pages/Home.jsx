@@ -82,7 +82,7 @@ const Home = () => {
             <div className=' w-auto bg-white shadow-sm my-5  '>
               <h1 className='text-[#575963] text-[17px] font-open px-3 py-4'>Dashboard</h1>
             </div>
-            <div className='flex gap-x-4 gap-y-4 flex-wrap'>
+            <div className='flex gap-x-2 md:gap-x-4 gap-y-4 flex-wrap'>
               <Cart text='Total Order' number='0' />
               <Cart text='Total Order' number='0' />
               <Cart text='Total Order' number='0' />
